@@ -8,13 +8,13 @@ function Todos() {
 
   return (
     <div className="max-w-md mx-auto mt-8">
-      <h2 className="text-2xl font-bold text-center mb-4 text-gray-900 dark:text-white">
-        Todos List
+      <h2 className="text-2xl font-bold text-center mb-6 text-gray-900 dark:text-white">
+        Todo List
       </h2>
       <ul className="list-none space-y-4">
         {todos.map((todo) => (
           <li
-            className="flex justify-between items-center bg-gray-200 dark:bg-gray-800 p-4 rounded-lg shadow-md"
+            className="flex justify-between items-center bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
             key={todo.id}
           >
             <span className="text-gray-800 dark:text-white text-md font-medium">
@@ -22,7 +22,7 @@ function Todos() {
             </span>
             <button
               onClick={() => dispatch(removeTodo(todo.id))}
-              className="flex items-center justify-center w-10 h-10 bg-red-500 hover:bg-red-600 text-white rounded-full focus:outline-none"
+              className="flex items-center justify-center w-10 h-10 bg-red-500 hover:bg-red-600 text-white rounded-full focus:outline-none transition-all duration-200 transform hover:scale-105"
               aria-label="Delete Todo"
             >
               <svg
